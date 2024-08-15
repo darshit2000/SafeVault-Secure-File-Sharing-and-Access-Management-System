@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+    	window.onload = onloadFunc;
+    </script>
+    <title>Access Management</title>
+</head>
+<body>
+<div id="flex-wrapper">
+  <div class="nav">
+    <ul>
+        <li style="float:left;color: white; font-size: 35px;padding: 20px 45px;font-family: 'Noto Sans','sans-serif';cursor: pointer;">
+            <span style="color: red;">SAFE</span><span style="color: #1f8bb2;">UPLOAD</span>
+        </li>
+
+        <li style="float:right">
+	        <button type="submit" id="logoutBtn" name="logoutBtn" onClick="logoutBtn()">Log Out</button>
+		</li>
+    </ul>
+</div>
+
+	<br><br><br>
+		<div style="display: flex; justify-content: center; align-items: center;">
+			<table id="responseTable" border="1" style="display: none;">
+		        <thead>
+		            <tr>
+		                <th>File Name / File ID</th>
+		                <th>User ID</th>
+		                <th>Pass Key</th>
+		                <th>Actions</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <!-- Rows will be dynamically inserted here -->
+		        </tbody>
+		    </table>
+	    </div>
+	    <br><br><br><br><br><br>
+	    <div style="display: flex; justify-content: center; align-items: center;">
+	      <form id="view" name="view" class="view" method="GET">
+	        <button type="submit" id="view" name="view" class="btn">View Files</button>
+	      </form>
+	    </div>
+	  <div id="show-table">
+	    <p id="tp" style="color: white; font-size:20px"></p>
+	    <table border="5" cellspacing="2" cellpadding="10" id="table" style="border-collapse: collapse; color: white; " ></table>
+	  </div>
+	    <footer>
+	      <p> Copyright © 2022 All rights reserved</p>       
+	   </footer>
+   </div>
+</body>
+</html>
